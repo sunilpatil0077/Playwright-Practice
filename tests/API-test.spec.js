@@ -27,7 +27,7 @@ test("API GET SINGLE RESOURCE",async({request})=>{
 
    
 })
-test.only("Update Resource",async({request})=>{
+test("Update Resource",async({request})=>{
 
 
     const response= await request.get('https://reqres.in/api/users/2')
