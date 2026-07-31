@@ -7,7 +7,7 @@ test.beforeEach(async({page})=>{
     await expect(page).toHaveTitle("Automation Testing Practice");
 })
 
-test.only("Verify Title",async({page})=>{
+test("Verify Title",async({page})=>{
 
     await expect(page).toHaveTitle("Automation Testing Practice");
    
