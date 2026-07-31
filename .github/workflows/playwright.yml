@@ -5,9 +5,13 @@ on:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
+concurrency:
+  group: playwright-schedule
+  cancel-in-progress: true
+
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 25
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
