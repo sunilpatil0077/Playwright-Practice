@@ -35,17 +35,13 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    launchOptions: {
-      // 1
-      args: ["--start-maximized"],
-    },
    //  Base URL to use in actions like `await page.goto('/')`. */
      baseURL: 'https://testautomationpractice.blogspot.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'off',
   },
-  
+
 
   /* Configure projects for major browsers */
   projects: [
@@ -57,31 +53,26 @@ export default defineConfig({
 
         // 3
         viewport: null,
+        launchOptions: {
+          args: ["--start-maximized"],
+        },
       }
     },
-/*
+
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-    /* Test against mobile viewports. */
-     {
-      name: 'Mobile',
-      testMatch:"Practicetest",
-      use: { ...devices['iPhone 12'] },
-    },
     // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
     // },
 
-    /* Test against branded browsers. */
+    // {
+    //   name: 'Mobile',
+    //   testMatch: "Practicetest",
+    //   use: { ...devices['iPhone 12'] },
+    // },
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
