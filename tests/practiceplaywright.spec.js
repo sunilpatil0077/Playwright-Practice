@@ -9,5 +9,5 @@ await page.locator("#userPassword").fill("Iamking@000")
 await page.locator("[value='Login']").click()
 console.log('Login Successful');
 await page.getByPlaceholder("Search").fill("adidas")
-await page.pause();
+// page.pause() removed — opens Playwright Inspector UI which hangs CI/CD
 });
