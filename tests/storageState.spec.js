@@ -1,4 +1,7 @@
-const {test,expect}= require("@playwright/test")
+const { test } = require("@playwright/test")
+
+test.describe.configure({ mode: 'serial' });
+
 let webContext;
 
 test("Storage State",async({browser})=>{
