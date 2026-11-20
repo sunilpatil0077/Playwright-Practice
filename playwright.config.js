@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config({
+// dotenv.config({
 
-  path:`./env/.env.${process.env.ENV}`
-})
+//   path:`./env/.env.${process.env.ENV}`
+// })
 
 
 
@@ -63,10 +63,10 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     // {
     //   name: 'Mobile',
