@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config({
+// dotenv.config({
 
-  path:`./env/.env.${process.env.ENV}`
-})
+//   path:`./env/.env.${process.env.ENV}`
+// })
 
 
 
