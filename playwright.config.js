@@ -11,6 +11,8 @@ module.exports = defineConfig({
   use: {
     headless: true,
     trace: 'on-first-retry',
+    navigationTimeout: 30000,
+    actionTimeout: 10000,
   },
   projects: [
     {
